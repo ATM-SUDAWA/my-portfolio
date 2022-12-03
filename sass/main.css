@@ -1,0 +1,23 @@
+.padding-big {
+  padding: 0 12.8rem;
+}
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.701), rgba(0, 0, 0, 0.811)), url(..images/code.jpg);
+  background-size: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #555;
+}/*# sourceMappingURL=main.css.map */
