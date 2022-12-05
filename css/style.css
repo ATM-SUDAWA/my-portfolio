@@ -12,6 +12,43 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-15rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.heading__secondary {
+  font-size: 3rem;
+  margin: auto;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  display: inline-block;
+  background-image: linear-gradient(to right, #10183c, #364fc7);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .u-margin-bottom-small {
   margin-bottom: 1.2rem !important;
 }
@@ -50,6 +87,7 @@ FONT SIZE SYSTEM (px)
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -70%);
 }
 .header__nav {
@@ -86,13 +124,28 @@ FONT SIZE SYSTEM (px)
 }
 .heading--primary-main {
   font-size: 5rem;
+  animation-name: moveLeft;
+  animation-duration: 1.5s;
+  display: block;
 }
 .heading--primary-sub {
   font-size: 3rem;
   color: #4683bc;
   display: block;
+  animation-name: moveRight;
+  animation-duration: 1s;
 }
 
+.section-projects {
+  background-color: #f7f7f7;
+  padding: 20rem 6rem 6rem 6rem;
+  margin: -10rem;
+  text-align: center;
+}
+
+.btn {
+  position: relative;
+}
 .btn, .btn:link, .btn:visited {
   display: inline-block;
   font-size: 1.8rem;
@@ -100,11 +153,52 @@ FONT SIZE SYSTEM (px)
   text-transform: uppercase;
   padding: 1.5rem 4rem;
   color: #fff;
+  transition: all 0.2s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+.btn:hover::after {
+  transform: scaleY(1.5) scaleX(1.8);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn__blue {
   background-color: #4683bc;
   margin-top: 3rem;
   text-align: center;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn__blue::after {
+  background-color: #4683bc;
+}
+
+.project {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  max-width: 120rem;
+}
+.project__img {
+  width: 100%;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

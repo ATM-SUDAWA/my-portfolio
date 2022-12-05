@@ -9,6 +9,7 @@
     url(../images/background.jpg);
   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   @include bgset;
+
   &__text-box {
     width: 50vw;
     position: absolute;
@@ -50,16 +51,22 @@
   }
 }
 
+
 .heading--primary {
   color: $color-white;
   line-height: 1.5;
   text-align: center;
   &-main {
     font-size: 5rem;
+    animation-name: moveLeft;
+    animation-duration: 1.5s;
+    display: block;
   }
   &-sub {
     font-size: 3rem;
     color: $primary-color-light;
     display: block;
+    animation-name: moveRight;
+    animation-duration: 1s
   }
 }
