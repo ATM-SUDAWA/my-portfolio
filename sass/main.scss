@@ -1,17 +1,15 @@
-@import "base/base";
-@import "base/animation";
-@import "base/typography";
-@import "base/utilities";
+@import 'abstract/functions';
+@import 'abstract/variable';
+@import 'abstract/mixins';
 
-@import "abstract/functions";
-@import "abstract/variable";
-@import "abstract/mixins";
+@import 'base/base';
+@import 'base/animation';
+@import 'base/utilities';
+@import 'base/typography';
 
-@import "layout/headers";
-@import "layout/navigations";
-@import "layout/sections";
-@import "pages/home";
+@import 'layout/header';
+@import 'layout/Description';
+@import 'pages/home';
 
-@import "component/btn";
-@import "component/project";
-
+@import 'component/btn';
+@import 'component/project';

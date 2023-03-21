@@ -1,3 +1,12 @@
+/*
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52
+
+62/ 74 / 86 / 98
+
+- Specing system
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
 * {
   margin: 0;
   padding: 0;
@@ -38,17 +47,6 @@ body {
     transform: translateX(0);
   }
 }
-.heading__secondary {
-  font-size: 3rem;
-  margin: auto;
-  margin-bottom: 3rem;
-  text-transform: uppercase;
-  display: inline-block;
-  background-image: linear-gradient(to right, #10183c, #364fc7);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
 .u-margin-bottom-small {
   margin-bottom: 1.2rem !important;
 }
@@ -65,38 +63,63 @@ body {
   margin-bottom: 8rem !important;
 }
 
-/*
-FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52
+.heading--secondary {
+  font-size: 3rem;
+  margin: auto;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  display: inline-block;
+  background-image: linear-gradient(to right, #10183c, #364fc7);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-62/ 74 / 86 / 98
+.heading--primary {
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: block;
+}
+.heading--primary-main {
+  font-size: 5rem;
+  text-align: center;
+  color: #fff;
+  animation-name: moveLeft;
+  animation-duration: 1.5s;
+}
+.heading--primary-sub {
+  font-size: 3rem;
+  display: block;
+  color: #4683bc;
+  animation-name: moveRight;
+  animation-duration: 1s;
+}
 
-- Specing system
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
 .header {
   position: relative;
+  max-width: 140rem;
   height: 100vh;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/background.jpg);
-  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(../images/background.jpg);
   background-size: cover;
   background-position: center;
 }
+.header__logo--img {
+  height: 5rem;
+  filter: brightness(50);
+  align-self: center;
+}
 .header__text-box {
-  width: 50vw;
+  width: 60vw;
   position: absolute;
   top: 50%;
   left: 50%;
   text-align: center;
-  transform: translate(-50%, -70%);
+  transform: translate(-50%, -50%);
 }
 .header__nav {
-  list-style: none;
-  font-size: 2rem;
   display: flex;
   justify-content: space-between;
+  list-style: none;
   padding: 3rem;
-  align-items: flex-start;
   transition: all 0.2s;
 }
 .header__nav--list {
@@ -108,39 +131,39 @@ FONT SIZE SYSTEM (px)
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
+  font-size: 2rem;
 }
 .header__nav--link:hover, .header__nav--link:active {
   color: #4683bc;
 }
-.header__nav--logo {
-  height: 5rem;
-  filter: brightness(30);
-}
 
-.heading--primary {
-  color: #fff;
+.Description {
+  padding: 15rem 3rem 15rem 3rem;
+  background-color: #d7d0c8;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  max-width: 140rem;
+}
+.Description--heading {
+  font-size: 6.5rem;
+  margin-left: 3rem;
+}
+.Description__text {
+  margin-top: 10rem;
+  font-size: 1.8rem;
+  width: 80%;
   line-height: 1.5;
-  text-align: center;
+  color: #343a40;
 }
-.heading--primary-main {
-  font-size: 5rem;
-  animation-name: moveLeft;
-  animation-duration: 1.5s;
-  display: block;
-}
-.heading--primary-sub {
-  font-size: 3rem;
-  color: #4683bc;
-  display: block;
-  animation-name: moveRight;
-  animation-duration: 1s;
+.Description__img-box {
+  background-image: linear-gradient(to right, rgba(215, 208, 200, 0.4), rgba(152, 136, 124, 0.4)), url("../../images/janko-ferlic-G-jo31ESuRE-unsplash (1).jpg");
+  background-position-x: center;
+  background-size: cover;
+  border-radius: 12px;
 }
 
-.section-projects {
-  background-color: #f7f7f7;
-  padding: 20rem 6rem 6rem 6rem;
-  margin: -10rem;
-  text-align: center;
+.main-area {
+  max-width: 140rem;
 }
 
 .btn {
@@ -187,18 +210,6 @@ FONT SIZE SYSTEM (px)
 
 .btn__blue::after {
   background-color: #4683bc;
-}
-
-.project {
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
-  max-width: 120rem;
-}
-.project__img {
-  width: 100%;
-  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
