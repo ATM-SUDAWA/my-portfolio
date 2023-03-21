@@ -1,0 +1,59 @@
+.header {
+  position: relative;
+  max-width: 140rem;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-black, 0.6),
+      rgba($color-black, 0.7)
+    ),
+    url(../images/background.jpg);
+  // clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  @include bgset;
+
+  &__logo {
+    &--img {
+      height: 5rem;
+      filter: brightness(50);
+      align-self: center;
+      //   position: absolute;
+      //   top: 3rem;
+      //   left: 1rem;
+    }
+  }
+  &__text-box {
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  &__nav {
+    // padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 3rem;
+    transition: all 0.2s;
+    &--list {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+    }
+    &--link {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 2rem;
+      }
+      &:hover,
+      &:active {
+        color: $primary-color-light;
+      }
+    }
+  }
+}

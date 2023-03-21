@@ -1,0 +1,29 @@
+.Description {
+  padding: 15rem 3rem 15rem 3rem;
+  background-color: $color-gray-1;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  max-width: 140rem;
+  &--heading {
+    font-size: 6.5rem;
+    margin-left: 3rem;
+  }
+  &__text {
+    margin-top: 10rem;
+    font-size: 1.8rem;
+    width: 80%;
+    line-height: 1.5;
+    color: $color-gray-4;
+  }
+  &__img-box {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-gray-1, 0.4),
+        rgba($color-gray-2, 0.4)
+      ),
+      url('../../images/janko-ferlic-G-jo31ESuRE-unsplash\ \(1\).jpg');
+    background-position-x: center;
+    background-size: cover;
+    border-radius: 12px;
+  }
+}
