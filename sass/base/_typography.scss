@@ -1,12 +1,21 @@
-.heading--secondary {
-  font-size: 3rem;
-  margin: auto;
-  margin-bottom: 3rem;
+.heading--primary {
+  line-height: 1.5;
   text-transform: uppercase;
-  display: inline-block;
-  background-image: linear-gradient(to right, #10183c, #364fc7);
-  -webkit-background-clip: text;
-  color: transparent;
+  display: block;
+  &-main {
+    font-size: 5rem;
+    text-align: center;
+    color: $color-white;
+    animation-name: moveLeft;
+    animation-duration: 1.5s;
+  }
+  &-sub {
+    font-size: 3rem;
+    display: block;
+    color: $primary-color-light;
+    animation-name: moveRight;
+    animation-duration: 1s;
+  }
 }
 
 .heading--primary {
@@ -27,4 +36,12 @@
     animation-name: moveRight;
     animation-duration: 1s;
   }
+}
+.heading--tertiary {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 5rem;
+  color: $color-white;
 }

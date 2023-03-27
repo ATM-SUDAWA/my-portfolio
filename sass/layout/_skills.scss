@@ -1,0 +1,36 @@
+.skills {
+  background-color: $color-black-1;
+  padding: 4rem 0;
+  &__box {
+    display: flex;
+    gap: 3rem;
+  }
+  &-flex {
+    flex: 1;
+    background-color: #222;
+    padding: 1.5rem;
+    border-radius: 9px;
+  }
+  &__heading {
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    // font-style: italic;
+    color: $primary-color-light;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+  &__paragraph {
+    font-size: 1.4rem;
+    font-weight: 200;
+    // font-style: italic;
+    line-height: 1.6;
+    color: $color-white-1;
+  }
+  &__img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+  }
+}
